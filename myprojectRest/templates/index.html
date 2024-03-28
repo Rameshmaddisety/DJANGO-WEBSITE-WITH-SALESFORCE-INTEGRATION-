@@ -1,0 +1,347 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ramesh Maddisetty</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Blog project">
+	<link rel="stylesheet" href="./social-media-icons.css">
+	<link rel="icon" href="static/images/pop1.png" sizes="400x400"/>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+<style>
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  background-color: #333;
+  color: blue;
+  font-size: 35px;
+  font-weight: bold;
+}
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+  }
+  
+  .topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px 25px;
+	text-decoration: none;
+	font-size: 20px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  .topnav a.active {
+	background-color: #04AA6D;
+	color: white;
+  }
+  div.desc {
+	position: absolute;
+	top: 150px;
+	left: 70px;
+	width: 800px;
+	height: 600px;
+  }
+
+.social-menu ul{
+    position: absolute;
+    top: 2200px;
+    
+	left:1030px;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3s;
+    color: red;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #0077b5;
+}
+.social-menu ul li:nth-child(5) a:hover{
+    background-color: red;
+}
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: blue;
+}
+.header {
+	background-color: lightpink;    
+	text-align: center;
+	width:100%;
+	height:700px;
+  }
+
+
+  div.bb {
+	position: absolute;
+	background-color: lightblue; 
+	top: 700px;
+	width:100%;
+	height:780px;
+  }
+
+  div.end {
+	position: absolute;
+	background-color: lightgreen; 
+	top: 1480px;
+	width:100%;
+	height:780px;
+  }
+  div.Certificate{
+	position: absolute;
+	top: 700px;
+	left:100px;
+	width:450px;
+	height:100px;
+  }
+  section.cert1{
+	position: absolute;
+	top: 950px;
+	left:950px;
+	width:400px;
+	height:200px;
+  }
+  div.Tube{
+	position: absolute;
+	top: 10px;
+	left:60px;
+	width:950px;
+	height:200px;
+  }
+ 
+   .slider {
+	position: absolute;
+	top:75px;
+	width: 800px;
+	height:800px;
+	overflow: hidden;
+  }
+  
+  .slides {
+	width: 800px;
+	height: 800px;
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+  }
+ 
+  .slides > div {
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 100px;
+  }
+  
+  
+  .slider > a {
+	display: inline-flex;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: white;
+	text-decoration: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin: 0 0 0.5rem 0;
+	position: relative;
+  }
+  .slider > a:active {
+	top: 1px;
+  }
+  .slider > a:focus {
+	background: #000;
+  }
+  
+  /* Don't need button navigation */
+  @supports (scroll-snap-type) {
+	.slider > a {
+	  display: none;
+	}
+  }
+
+</style>
+</head>
+<body>
+	<div id="bb" class="bb">
+	</div>
+	<nav class="header">
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog">
+				<button type="submit" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>  
+				<img src="static/images/pop1.png" style="width:100%">
+				<center><h1 style="color:yellow">hello</h1></center>
+		</div>
+	</div>
+	<div class="topnav">
+		<a class="active" href="">Home</a>
+		<a href="about">About</a>
+		<a href="galary">Galary</a>
+		<a href="contact">Contact</a>
+		{% if message %}
+		<a href="logout">Logout</a>
+		<h2 align="right" style="color:pink;">Hello, {{message}} Welcome to my world....</h2>
+		{% else %}	
+		<a href="register">Register</a>
+		<a href=login>Login</a>
+		{% endif %}
+	</div>
+
+		<img align="right" src="static/images/display1.png" style="width:400px" style="height:650px">
+	   
+		<div class="desc">
+			<br><h2><b> Hello There Ramesh Here....<b></h2><br>
+			<h3>Welcome to my world, here you can find complete details about me...</h3>
+			<br>
+			<br>
+			<h4>I Ramesh Maddisetty and I am a Software Engineer at Capgemini, Skilled in Salesforce Administration, Development and I am good at Java, Spring boot, </h4><br>
+			<h4> Spring Security,Spring MVC and Spring JPA,Python,Django and also i know front end Tech Stack... </h4><br>
+			<h4>like HTML,CSS and JS....</h4>
+		</div>
+	</div>
+
+	
+</nav>
+<div class="Certificate">
+	<h1><b>Here's my Certificates....</b></h1>
+	<br>
+	<h1>Scroll for Docx</h1>
+	<br>
+	<h1 style="width:200px"></h1>
+	<br>
+	<br>
+	<br>
+	<div class="slider">
+		<div class="slides">
+			<div id="slide-1">
+				<img src="static/images/PD1.png" style="border-radius:5%" style="width:300px" style="height:250px">
+			  </div>
+			  <div id="slide-2">
+				<img src="static/images/Associate.png" style="border-radius:5%" style="width:350px" style="height:550px">
+			  </div>
+			  <div id="slide-3">
+				<img src="static/images/Copado-1.png" style="border-radius:5%" style="width:350px" style="height:550px">
+			  </div>
+			  <div id="slide-4">
+				<img src="static/images/Copado-2.png" style="border-radius:5%" style="width:350px" style="height:550px">
+			  </div>
+		
+			  <div id="slide-6">
+				<img src="static/images/Coursera.png" style="border-radius:5%" style="width:350px" style="height:550px">
+			  </div>
+	      <div id="slide-7">
+		    <img src="static/images/cert1.png" style="border-radius:5%" style="width:700px" style="height:450px">
+		  </div>
+	      <div id="slide-8">
+		    <img src="static/images/cert2.png" style="border-radius:5%" style="width:700px" style="height:450px">
+	      </div>
+	      <div id="slide-9">
+		   <img src="static/images/cert3.png" style="border-radius:5%" style="width:700px" style="height:450px">
+	      </div>
+	      <div id="slide-10">
+		    <img src="static/images/pc.png" style="border-radius:5%" style="width:350px" style="height:550px">
+	     </div>
+		 
+		  <div id="slide-11">
+		    <img src="static/images/Hsc.png" style="border-radius:5%" style="width:350px" style="height:550px">
+	      </div>
+
+		  <div id="slide-12">
+		    <img src="static/images/ssc.png" style="width:350px" style="height:350px">
+	      </div>
+	    </div>
+	</div>
+</div>
+
+<!-- <section class="cert1">
+	<p><i><h3>Here's Is My all Acadamic and as well as my Participation in Workshops Certificate for participated in various  Internships and Trainings provided by Tech Companies. Attended and gained various Skills..., Which includes Java,Python,C,Django, SpringBoot, Spring MVC, Spring Security, Data stuctures and Algorithms,Html,CSS and Java Script...</p></i>
+
+</section> -->
+	
+
+<div id="end" class="end">
+	<div class="Tube">
+		<h1><i><b>Have you seen our Videos...?</h1></i></b><br> 
+		<iframe width="500" height="280"
+		src="https://www.youtube.com/embed/21jC8aQ7_wI?controls=0">
+		    https://www.youtube.com/watch?v=tgbNymZ7vqY
+		</iframe>
+		<iframe align="right" width="500" height="280"
+		src="https://youtu.be/VpK-wCKArzY?si=BV0Jzl2_t6FPcVod">
+		</iframe> 
+	</div>
+</div>
+
+
+	<div class="social-menu">
+	  <ul>
+		<li><a href="https://www.facebook.com/maddisety.ramesh.92/" target="blank"><i class="fab fa-facebook"></i></a></li>
+		<li><a href="https://github.com/Rameshmaddisety" target="blank"><i class="fab fa-github"></i></i></a></li>
+		<li><a href="https://www.instagram.com/rameshmaddisety/" target="blank"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="https://www.linkedin.com/in/ramesh-maddisetty-52227b194/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="https://www.youtube.com/@Rameshmaddisety/"><i class="fab fa-youtube" target="blank"></i></a></li>
+	   </ul>
+    </div>
+	</body>
+	</html>

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>  
+<html>  
+<head> 
+  <title>Register</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+<link rel="icon" href="static/images/pop1.png" sizes="400x400"/>
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+ 
+  background-color: pink;
+}  
+.container {  
+    margin: auto; 
+    padding: 50px;
+    top: 100px ;
+    left: 200px;
+    width : 400px;
+    height:300px;
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  border-radius: 25px;
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ 
+.myButton{
+  box-shadow:0px 0px 0px 0px #9fb4f2;
+  background-color:#8c52ff;
+  border-radius:28px;
+  border:1px solid #8c52ff;
+  display:inlin-block;
+  cursor:pointer;
+  color:white;
+  font-family:Arial;
+  font-size:17px;
+  padding:10px 15px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+  }
+  .myButton:active{
+  position:relative;
+  top:1px;
+  }
+  .myButton:hover{
+   color:black;
+   opacity:0.8;
+  }
+</style>  
+</head>  
+<body>  
+  <form action="register" method="post">
+        {% csrf_token %}
+        <div class="container"> 
+
+          <!-- Handling Json -->
+          {% for account in data %}
+          <h1>{{ account.Name }}</h1>
+          {% endfor %}
+
+          
+          
+          <!-- handling List
+            {% for account in data %}
+          <h1>{{ account }}</h1>
+          {% endfor %} -->
+
+        <center> <h1>Register Here...</h1> </center> 
+          <label> Firstname </label>   
+          <input type="text" name="first_name" placeholder= "Firstname" size="15" required />   
+          <label> Lastname: </label>    
+          <input type="text" name="last_name" placeholder="Lastname" size="15"required />
+          <label><b>Username</b></label>  
+          <input type="text" name="username" placeholder="Username">
+          <label>Gender :  </label><br>
+          <input name="gd" type="radio" value="Male" name="gender" checked > Male   
+          <input name="gd" type="radio" value="Female" name="gender"> Female   
+          <input name="gd" type="radio" value="Other" name="gender"> Other<br>
+          <label>Phone : </label>
+          <input type="text" name="phone" placeholder="phone no." size="10" required>      
+          <label ><b>Email</b></label>  
+          <input type="text" placeholder="email" name="email" required>  
+          <label><b>Password</b></label>  
+          <input type="password" placeholder="Enter Password" name="password1" required>  
+          <label><b>Re-type Password</b></label>  
+          <input type="password" placeholder="Retype Password" name="password2" required>  
+          <center><button type="submit" class="myButton">Register</button>  
+        </div>  
+</form>  
+
+<div>
+    {% for message in messages %}
+    <h3> {{message}}  </h3>
+    {% endfor %}
+</div>
+</body>  
+</html>  

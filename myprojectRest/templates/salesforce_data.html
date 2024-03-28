@@ -1,0 +1,18 @@
+<!-- salesforce_data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Data</title>
+</head>
+<body>
+    <h1>Salesforce Data</h1>
+    <ul>
+        {% for account in accounts %}
+            <b><li>{{ account.Name }}</li></b>
+        {% endfor %}
+    </ul>
+</body>
+</html>

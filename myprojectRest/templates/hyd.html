@@ -1,0 +1,18 @@
+<h1> hello hyderabad<h1>
+  
+    <body>
+        <form action="login" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="username"><br>
+            <input type="password" name="password" placeholder="password"><br>
+            <input type="Submit">
+        </form>
+    
+    
+        <div>
+                {% for message in messages %}
+                <h3> {{message}}  </h3>
+                {% endfor %}
+        </div>
+    </body>
+    </html>
